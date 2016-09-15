@@ -1,0 +1,25 @@
+<!-- Paragraph Block -->
+<p ng-if="y.acf_fc_layout == 'paragraph'" ng-bind-html="y.content_paragraph" class="md-body-1" ></p>
+<div ng-if="y.acf_fc_layout == 'table'" class="table-container">
+  <!-- Table Block -->
+  <table id="table" class="table table-bordered">
+  <thead>
+    <tr>
+    <th ng-repeat="label in y.content_table.header">{{label.c}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in y.content_table.body">
+      <td ng-repeat="(key,value) in row">{{value.c}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<!-- Section Header Block -->
+<h4 ng-if="y.acf_fc_layout == 'section_title'" class="md-headline md-primary" ng-bind-html="y.content_heading"></h4>
+
+<!-- Image Block -->
+<img ng-if="y.acf_fc_layout == 'image'" ng-src="{{y.content_image}}">
+
+<!-- Callout -->
+<blockquote ng-if="y.acf_fc_layout == 'callout'" class="md-subhead" ng-bind-html="y.content_callout"></blockquote>

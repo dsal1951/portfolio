@@ -1,0 +1,24 @@
+<div class="home-grid">
+        <div layout="row" layout-align="space-around none" layout-wrap>
+          <md-card flex="40" ng-repeat="post in data">
+            <img ng-src="{{post.acf.main_image}}" class="md-card-image">
+            <md-card-title flex="nogrow">
+              <md-card-title-text>
+              <span class="md-caption md-accent"><md-icon class="material-icons">access_time</md-icon>{{post.date | date:'longDate'}}</span>
+                 <h4 class="md-title" ng-bind-html="post.title.rendered"></h4>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+              <p class="md-body-1" ng-bind-html="post.acf.article_summary"></p>
+              </md-card-content>
+              <md-card-footer>
+             <md-card-actions layout="row" layout-align="end center">
+                <md-button id="{{post.id}}" href="/#/article/{{post.id}}"  class="md-primary">Read More</md-button>
+            </md-card-actions>
+            </md-card-footer>
+          </md-card>
+          </div>
+
+
+
+</div>

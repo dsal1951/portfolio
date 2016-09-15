@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="norms">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <title>Trent Salazar Blog</title>
+    <link rel="shortcut icon" href="favicon.ico" type='image/x-icon'/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Libs -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="js/libs/angular-material.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+
+    <script src="js/libs/angular-scroll.min.js"></script>
+
+    <!--Angular Files -->
+    <script src="js/app.js"></script>
+
+    <!-- Custom Factories -->
+    <script src="js/factory/configFactory.js"></script>
+
+    <!--Custom Directives-->
+    <script src="js/directives/flexContent.js"></script>
+
+    <!-- Custom Controllers -->
+
+    <script src="js/controllers/appCtrl.js"></script>
+    <script src="js/controllers/blogCtrl.js"></script>
+    <script src="js/controllers/resumeCtrl.js"></script>
+    <script src="js/controllers/portfolioCtrl.js"></script>
+    <script src="js/controllers/designCtrl.js"></script>
+    <script src="js/controllers/articleCtrl.js"></script>
+    <script src="js/controllers/projectCtrl.js"></script>
+
+
+
+</head>
+
+<body ng-cloak layout="row" ng-controller="appCtrl">
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+            md-is-locked-open="sideNavOpen">
+    <div class="nav-header" layout="row" layout-align="start center">
+        <img src="img/logo.svg">
+        <h1 class="md-headline">Trent Salazar</h1>
+    </div>
+    <div ng-repeat="page in menuLevels">
+        <!-- <md-divider ng-show="{{page.visible}}" class="md-default-theme"></md-divider> -->
+        <md-list-item>
+            <md-button href="{{page.name}}" class="nav-item">
+                <md-icon class="material-icons">{{page.icon}}</md-icon>
+                {{page.label}}
+            </md-button>
+        </md-list-item>
+    </div>
+</md-sidenav>
+<div class="main-container" layout="column" flex>
+    <md-toolbar layout="row" class="md-whiteframe-z2" layout-align="space-between center">
+        <h2 class="md-title" ng-bind-html="title"></h2>
+        <md-button ng-click="toggleSidenav()" id="menu-button" class="md-icon-button">
+            <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+        <!-- Progress bar that is triggered on loading event -->
+        <md-progress-linear ng-show="loading" md-mode="indeterminate" class="md-accent"></md-progress-linear>
+    </md-toolbar>
+    <!-- Side Nav -->
+
+
+    <!-- Main Content Viewport -->
+    <md-content id="main-content" flex ng-view ng-cloak>
+
+
+    </md-content>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+/*-------------------------------------------------------
+ANGULAR-MATERIAL BUG FIXES
+-------------------------------------------------------*/
+/*@media (min-width: 1280px){*/
+/*.layout-column.layout-gt-md-row>.flex-gt-md-20{*/
+/*-webkit-flex: 1 1 20%;*/
+/*-ms-flex: 1 1 20%;*/
+/*flex: 1 1 20%;*/
+/*max-width: 20%;*/
+/*max-height: 100%;*/
+/*box-sizing: border-box;*/
+/*}}*/
+/*-------------------------------------------------------
+MATERIAL RESETS
+-------------------------------------------------------*/
+md-list-item .md-list-item-inner:before, md-list-item:before {
+  display: none; }
+
+/*-------------------------------------------------------
+BROWSER STYLE RESETS
+-------------------------------------------------------*/
+body {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%; }
+
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none; }
+
+p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inherit; }
+
+table, td, th {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+:focus {
+  outline: none; }
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em; }
+
+::-webkit-scrollbar-thumb {
+  background: #B9B9B9; }
+
+::-webkit-scrollbar-track {
+  background: none; }
+
+/*---------------------------------------------------------
+GENERAL
+-----------------------------------------------------------*/
+md-card .md-subheader {
+  background-color: #ffffff; }
+
+/*---------------------------------------------------------
+TOOLBAR
+-----------------------------------------------------------*/
+md-toolbar {
+  padding: 0 24px; }
+  md-toolbar div.header {
+    width: 320px;
+    background-color: #1976D2;
+    height: 64px; }
+    md-toolbar div.header h1 {
+      padding-left: 24px; }
+
+/*---------------------------------------------------------
+SIDE NAV
+-----------------------------------------------------------*/
+.nav-header {
+  width: 100%;
+  height: 64px;
+  padding-left: 24px;
+  background-color: #1976D2; }
+
+.nav-header img {
+  width: 40px;
+  margin-right: 10px; }
+
+.nav-header h1 {
+  color: #ffffff; }
+
+.nav-item {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%; }
+
+.nav-item md-icon {
+  min-height: 24px;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; }
+
+.nav-item span {
+  padding-left: 10px;
+  vertical-align: middle; }
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+md-button.md-button-toggle {
+  padding: 0 18px; }
+
+.nav-item {
+  text-transform: capitalize;
+  padding: 4px 0 4px 24px;
+  line-height: 35px; }
+
+md-sidenav h4 {
+  font-size: 1.2em;
+  margin: 0.33em;
+  padding-left: 18px;
+  text-transform: uppercase; }
+
+a.nav-item {
+  display: block; }
+
+img.md-card-image {
+  height: auto !important; }
+
+md-card md-content {
+  background-color: #ffffff; }
+
+#main-content {
+  background-color: #ECECEC; }
+
+div.content-container {
+  width: 100%;
+  height: 100%; }
+
+/*---------------------------------------------------------
+Article
+-----------------------------------------------------------*/
+div.content-container {
+  width: 100%;
+  height: 100%; }
+
+md-card.article {
+  max-width: 1160px;
+  width: 100%;
+  min-height: 300px; }
+
+div.article-head h2 {
+  padding: 24px 16px; }
+
+md-card.article p {
+  font-size: 16px;
+  letter-spacing: .010em;
+  font-weight: 300;
+  line-height: 32px;
+  width: 720px;
+  margin-bottom: 12px; }
+
+/*---------------------------------------------------------
+Scroll Spy
+-----------------------------------------------------------*/
+/*Horizontal Styling*/
+.scroll-spy {
+  width: 100%;
+  margin: 0;
+  z-index: 10; }
+
+.scroll-spy md-list {
+  padding: 0; }
+
+.scroll-spy .md-button:hover {
+  background-color: #ffffff; }
+
+.scroll-spy md-list-item a.md-button {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0 16px;
+  border-radius: 0px;
+  height: 48px;
+  line-height: 48px;
+  text-transform: none; }
+
+a.active {
+  background: #eeeeee;
+  color: #000000;
+  border-left: none;
+  border-bottom: 2px solid #1976D2; }
+
+.scroll-spy .md-button.active:hover {
+  background-color: #eeeeee; }
+
+#scroll-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 8px; }
+
+/*Vertical Styling */
+@media (min-width: 1280px) {
+  .scroll-spy {
+    width: 225px;
+    margin-top: 225px; }
+
+  a.active {
+    border-left: 2px solid #1976D2;
+    border-bottom: none; } }
+/*---------------------------------------------------------
+Resume
+-----------------------------------------------------------*/
+md-card.resume {
+  max-width: 1160px;
+  width: 100%;
+  min-height: 300px;
+  margin: 8px 0; }
+
+.resume section {
+  display: block;
+  width: 100%; }
+.resume a {
+  color: #1976D2;
+  text-decoration: none; }
+  .resume a:hover, .resume a:visited {
+    color: #1976D2;
+    text-decoration: none; }
+.resume md-list-item {
+  padding: 8px 0 8px 16px; }
+.resume .company {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left; }
+  .resume .company span {
+    font-weight: 400; }
+.resume .date {
+  font-size: 16px;
+  text-align: end; }
+.resume .title {
+  font-size: 16px; }
+.resume md-list.description {
+  padding: 0;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .010em;
+  margin: 0;
+  line-height: 1.6em; }
+  .resume md-list.description span {
+    font-weight: 500; }
+  .resume md-list.description md-list-item {
+    padding: 4px 8px; }
+.resume .md-subhead {
+  padding-top: 18px; }
+.resume .programming-languages div {
+  height: 100%;
+  padding: 16px; }
+
+.download {
+  position: absolute;
+  right: 15px;
+  bottom: 20px; }
+
+@media (min-width: 1920px) {
+  .download {
+    position: absolute;
+    right: 200px;
+    bottom: 50px; } }
+/*---------------------------------------------------------
+Portfolio
+-----------------------------------------------------------*/
+.project-grid md-card {
+  max-width: 1080px; }
+
+/*---------------------------------------------------------
+Project
+-----------------------------------------------------------*/
+.project md-card {
+  width: 100%;
+  max-width: 960px; }
+
+.project-details md-card {
+  width: 100%;
+  max-width: 400px; }
+.project-details .project-head {
+  padding: 16px 16px 8px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+.project-details .md-caption {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: bold; }
+.project-details md-card.info-card div.info-body {
+  padding: 16px 24px 8px 24px; }
+.project-details .project-body {
+  padding: 16px 24px 8px 24px; }
+.project-details .info {
+  padding-bottom: 8px; }
+
+/*# sourceMappingURL=custom.css.map */

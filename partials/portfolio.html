@@ -1,0 +1,17 @@
+<div class="project-grid">
+        <div layout="column" layout-align="center center" layout-wrap>
+          <md-card  ng-repeat="page in data">
+            <img ng-src="{{page.acf.project_image}}" class="md-card-image">
+            <md-divider></md-divider>
+            <md-card-title flex="nogrow">
+              <md-card-title-text>
+              <span class="md-caption md-accent"><md-icon class="material-icons">access_time</md-icon>{{page.date | date:'longDate'}}</span>
+                 <a class="md-title" id="{{page.id}}" href="/#/project/{{page.id}}"  ng-bind-html="page.title.rendered"></a>
+              </md-card-title-text>
+            </md-card-title>
+          </md-card>
+          </div>
+
+
+
+</div>

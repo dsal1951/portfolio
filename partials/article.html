@@ -1,0 +1,12 @@
+<div class="content-container" layout="column" layout-align="start center">
+    <md-card class="article">
+        <div class="article-head">
+            <h2 class="md-title">{{data.title.rendered}}</h2>
+            <md-divider></md-divider>
+        </div>
+        <md-content layout="column" layout-align="start center" layout-padding>
+        <flex-content ng-repeat="y in data.acf.article_body">
+        </flex-content>
+            </md-content>
+    </md-card>
+</div>
