@@ -2,12 +2,15 @@
      layout-align="center none">
     <div layout="row" layout-gt-md="column" layout-align="center center" layout-align-gt-md="start center"
          flex-offset-xl="5" flex-gt-md="20" flex="nogrow">
-        <md-card layout="row"  layout-gt-md="column" class="scroll-spy" du-scroll-container="scroll-container">
+        <md-card layout="row" layout-gt-md="column" class="scroll-spy" du-scroll-container="scroll-container">
             <md-subheader class="md-no-sticky">Navigation</md-subheader>
             <md-list layout="row" layout-gt-md="column" layout-align="space-around center"
                      layout-align-gt-md="start stretch">
                 <md-list-item>
                     <md-button href="##contact" du-smooth-scroll du-scrollspy>Contact Information</md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button href="##contact" du-smooth-scroll du-scrollspy>Summary</md-button>
                 </md-list-item>
                 <md-list-item>
                     <md-button href="##work" du-smooth-scroll du-scrollspy>Work Experience</md-button>
@@ -47,94 +50,105 @@
                     </md-list-item>
                     <md-list-item flex="40">
                         <md-icon class="md-avatar-icon" md-svg-src="img/linkedin.svg"></md-icon>
-                       <p> <a href="https://www.linkedin.com/in/trentsalazar">Linkedin Profile</a></p>
+                        <p><a href="https://www.linkedin.com/in/trentsalazar">Linkedin Profile</a></p>
                     </md-list-item>
                     <md-list-item flex="40">
                         <md-icon class="md-avatar-icon" md-svg-src="img/behance.svg"></md-icon>
-                      <p><a href="https://www.behance.net/TSalazar">Behance Profile</a></p>
+                        <p><a href="https://www.behance.net/TSalazar">Behance Profile</a></p>
                     </md-list-item>
                 </md-list>
             </section>
         </md-card>
+
+        <md-card flex="noshrink" class="resume" layout="column" layout-align="start center" layout-padding>
+            <section id="summary">
+                <h2 class="md-headline">Summary</h2>
+                <p class="md-subhead">Versatile Data Scientist and manager with demonstrated success building new teams
+                    and products in extremely fast-paced startup environments. Took over ownership of Datalogix’s
+                    repository of past ad performance data – known as Norms – when it was still a manually populated
+                    spreadsheet. Over the next two years created the roadmap to develop and monetize Norms, evangelized
+                    the plan throughout the organization, and built a team of Data Scientists to execute it. Norms is
+                    now its own standalone product line, and is being integrated for use by analytics teams at some of
+                    the largest digital platforms such as Facebook, Pinterest, and Snapchat.</p>
+            </section>
+        </md-card>
+
+
         <md-card flex="noshrink" class="resume" layout="column" layout-align="start center" layout-padding>
             <section id="work">
                 <h2 class="md-headline">Work Experience</h2>
                 <md-list flex>
                     <md-list-item layout="row" layout-align="space-between" layout-wrap>
                         <h4 class="company" flex="75">Oracle</h4>
-                        <h4 class="date" flex="none">03/2016 - Present</h4>
+                        <h4 class="date" flex="none">2016 - Present</h4>
                         <h5 class="title" flex="100">Sr. Data Scientist</h5>
                         <md-list class="description">
                             <md-list-item>
-                                <p><span>Strategic Analytics Lead</span>: Managed a team of 5 direct reports, all Data
-                                    Scientists with Masters or PhD, responsible for monetizing Oracle’s experience in
-                                    the
-                                    digital measurement and targeting space through new product development and
-                                    industry-facing research.</p>
+                                <p><span>Strategic Analytics Lead</span>: Hired and managed a team of five direct
+                                    reports, all Data Scientists with Masters or PhD, responsible for monetizing
+                                    Oracle’s experience in the digital measurement and targeting space through new
+                                    product development and industry-facing research.</p>
                             </md-list-item>
-                            <md-list-item><p><span>New Product Development</span>: Created a new measurement product
-                                that
-                                provides advertisers with industry benchmarks and analysis to improve all dimensions of
-                                their digital advertising efforts. The product utilized a data visualization framework
-                                we developed in Python using SciPy and Matplotlib. Presented product prototype to senior
-                                marketing leaders at five of the largest consumer goods companies.</p>
+                            <md-list-item><p><span>New Product Development</span>: Created a new product that provides
+                                advertisers with industry benchmarks and analysis to improve all dimensions of their
+                                digital advertising. The product utilizes a data visualization framework we developed in
+                                Python. Presented product prototype to senior marketing leaders at five of the largest
+                                consumer goods companies.</p>
                             </md-list-item>
-                            <md-list-item><p><span>Predictive Modeling</span>: Led 6-month research initiative to
-                                create a
-                                model that would predict which individuals would drive incremental sales in any digital
-                                advertising campaign. Utilized a number of tree-based machine learning techniques (using
-                                Scikit-learn and PySpark) to create models that were both predictive of future events
-                                and interpretable so that the insights could be communicated to stakeholders throughout
-                                the business.</p>
+                            <md-list-item><p><span>Industry Thought Leadership</span>: Defined thought leadership
+                                roadmap for Oracle Data Cloud. Led team of Data Scientists in the execution of the
+                                roadmap through original research and the delivery of industry-facing content such as
+                                conference presentations, whitepapers, op-ed pieces, infographics, blog posts, and sales
+                                collateral.</p>
                             </md-list-item>
                         </md-list>
                     </md-list-item>
                     <md-list-item layout="row" layout-align="space-between" layout-wrap>
                         <h4 class="company" flex="75">Oracle</h4>
-                        <h4 class="date" flex="none">04/2015 - 03/2016</h4>
+                        <h4 class="date" flex="none">2014 - 2015</h4>
                         <h5 class="title" flex="100">Data Scientist</h5>
                         <md-list class="description">
-                            <md-list-item><p><span>Web App Development</span>: Created an internal UI using AngularJS,
-                                D3js, and Flask to provide decision makers throughout the company with secure access to
-                                all data and insights generated from Oracle’s ROI measurement product.</p>
-                            </md-list-item>
-                            <md-list-item><p><span>Industry Thought Leadership</span>: Defined thought leadership
-                                roadmap
-                                for Oracle Data Cloud. Led team of Data Scientists in the execution of the roadmap
-                                through original research and the creation of industry-facing content such as:
-                                conference presentations, whitepapers, op-ed pieces, blog posts, and sales collateral.
-                            </p>
-                            </md-list-item>
-                            <md-list-item><p><span>Business Development</span>: Researched the incremental impact of
+                            <md-list-item><p><span>Business Development</span>: Quantified the incremental impact of
                                 Oracle’s audience products on digital advertising performance. Presented findings to
-                                Data Science teams at Facebook and Twitter as part of effort to allow Oracle audience
-                                products to be sold to advertisers through their platforms – currently an eight-figure
+                                decision makers at Facebook and Twitter to help persuade them to allow Oracle audience
+                                products to be sold to advertisers through their platforms – currently a nine-figure
                                 business for Oracle.</p>
                             </md-list-item>
+                            <md-list-item><p><span>Predictive Modeling</span>: Led six-month research initiative to
+                                create a model that predicts which individuals would drive incremental sales in any
+                                digital advertising campaign. Utilized a number of tree-based machine learning
+                                techniques (using Scikit-learn and PySpark) to create models that were both predictive
+                                of future events and interpretable.
+
+                            </p>
+                            </md-list-item>
+                            <md-list-item><p><span>Web App Development</span>: Created an internal UI using AngularJS
+                                and D3 to provide teams throughout the company with secure access to all data and
+                                insights generated from Oracle’s ROI™ measurement product.</p>
+                            </md-list-item>
+                            <md-list-item><p>Promoted to Sr. Data Scientist after thirteen months while continuing to
+                                manage two Data Scientists.</p></md-list-item>
                         </md-list>
                     </md-list-item>
                     <md-list-item layout="row" layout-align="space-between" layout-wrap>
                         <h4 class="company" flex="75">Datalogix (<a
                                 href="http://www.wsj.com/articles/oracle-paid-more-than-1-2-billion-for-datalogix-1423083774"
                                 target="_blank">Aquired by Oracle</a>)</h4>
-                        <h4 class="date" flex="none">12/2013 - 04/2015</h4>
+                        <h4 class="date" flex="none">2013 - 2014</h4>
                         <h5 class="title" flex="100">Associate Analyst</h5>
                         <md-list class="description">
                             <md-list-item><p><span>Client Consulting</span>: Led custom research engagements for two of
-                                the largest social media platforms to analyze different aspects of their performance and
-                                pricing algorithms. These projects generated over $1.5MM of direct revenue for Datalogix
-                                and answered important longterm strategic questions for our business. </p>
+                                the largest social media platforms to analyze the performance of their targeting data
+                                and pricing algorithms. These projects generated over $1.5MM of direct revenue for
+                                Datalogix and led to new business development opportunities with these partners. </p>
                             </md-list-item>
                             <md-list-item><p><span>Data Infrastructure</span>: Developed Datalogix’s Norms database – a
                                 repository of all advertising performance data collected on behalf of clients – and
                                 created automated ETL processes to populate it using Python and SQL.
                             </p>
                             </md-list-item>
-                            <md-list-item><p><span>Business Development</span>: Researched the incremental impact of
-                                Oracle’s audience products on digital advertising performance. Presented findings to
-                                Data Science teams at Facebook and Twitter as part of effort to allow Oracle audience
-                                products to be sold to advertisers through their platforms – currently an eight-figure
-                                business for Oracle.</p>
+                            <md-list-item>Received first direct report after seven months and promoted to Data Scientist
+                                after ten months.
                             </md-list-item>
                         </md-list>
                     </md-list-item>
@@ -152,6 +166,7 @@
                 </md-list>
             </section>
         </md-card>
+
         <md-card flex="noshrink" class="resume" layout="column" layout-align="start center" layout-padding>
             <section id="education">
                 <h2 class="md-headline">Education</h2>
@@ -189,7 +204,7 @@
                 </div>
             </section>
         </md-card>
-        <md-button ng-href="files/resume.docx" target="_self" class="download md-fab md-accent">
+        <md-button ng-href="files/David_Salazar_Resume.pdf" target="_self" class="download md-fab md-accent">
             <md-tooltip md-direction="top">Download Resume</md-tooltip>
             <md-icon>file_download</md-icon>
         </md-button>

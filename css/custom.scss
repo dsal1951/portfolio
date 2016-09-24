@@ -21,6 +21,9 @@ $media-xl: 1920px;
 $primary: #1976D2;
 
 
+* { margin: 0; padding: 0; }
+
+
 /*-------------------------------------------------------
 MATERIAL RESETS
 -------------------------------------------------------*/
@@ -141,13 +144,23 @@ SIDE NAV
 .nav-item md-icon {
   min-height: 24px;
   color: rgba(0, 0, 0, 0.54);
-  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+md-icon.disabled{
+  vertical-align: bottom;
 }
 
 .nav-item span {
   padding-left: 10px;
   vertical-align: middle;
+}
+
+span.coming{
+    display: block;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 0;
+    padding-left: 39px;
 }
 
 .visually-hidden {
@@ -296,7 +309,7 @@ Resume
 md-card.resume {
   max-width: 1160px;
   width: 100%;
-  min-height: 300px;
+  min-height: 200px;
   margin: 8px 0;
 }
 
@@ -305,6 +318,12 @@ md-card.resume {
     display: block;
     width: 100%;
   }
+
+  #summary p.md-subhead{
+    line-height: 1.9;
+    padding: 8px 0 8px 16px;
+  }
+
   a {
     color: $primary;
     text-decoration: none;
@@ -382,7 +401,6 @@ Project
 
 .project{
   md-card{
-    width: 100%;
     max-width: 960px;
   }
 }
@@ -409,3 +427,23 @@ Project
     padding-bottom:8px;
   }
   }
+
+
+/*Vertical Styling */
+@media (min-width: $media-med) {
+  .project{
+    md-card{
+      max-width:100%
+    }
+  }
+.project-details{
+  md-card{
+    max-width: 100%;
+  }
+}
+
+}
+
+/*---------------------------------------------------------
+Coming Soon
+-----------------------------------------------------------*/

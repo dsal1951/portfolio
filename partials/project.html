@@ -1,5 +1,5 @@
-<div class="content-container" layout="row" layout-align="space-between start">
-    <div class="project" layout="column" layout-align="start center" flex="66">
+<div class="content-container" layout="coulumn" layout-gt-md="row" layout-align="space-between start" layout-wrap>
+    <div class="project" layout="column" layout-align="start center" flex="100" flex-gt-md="66" flex-order="2" flex-order-gt-md="1">
         <md-card flex="noshrink" md-whiteframe="2" ng-repeat="entry in data.acf.entry">
             <img ng-src="{{entry.image}}" class="md-card-image">
             <md-divider></md-divider>
@@ -13,23 +13,31 @@
             </md-card-content>
         </md-card>
     </div>
-    <div class="project-details" layout-align="start center" layout="column" flex="33">
-        <md-card md-whiteframe="2">
+    <div class="project-details" layout-align="start center" layout="row" flex-gt-md="33" flex="100" flex-order="1" flex-order-gt-md="2">
+        <md-card  md-whiteframe="2">
             <div class="project-head">
-                <h4 class="md-caption">Description</h4>
+                <h4 class="md-subhead">Description</h4>
                 <h2 class="md-title" ng-bind-html="data.title.rendered"></h2>
             </div>
             <div class="project-body">
                 <div class="info" layout="column" layout-align="start start">
-                    <h4 class="md-caption">Created</h4>
+                    <h4 class="md-subhead">Created</h4>
                     <div layout="row">
                         <p class="md-body-1" style="margin-right:4px" ng-bind-html="data.acf.delivered_month"></p>
                         <p class="md-body-1" ng-bind-html="data.acf.delivered_year"></p>
                     </div>
                 </div>
                 <div class="info" layout="column" layout-align="start start">
-                    <h4 class="md-caption">Delivered to</h4>
-                    <p class="md-body-1" ng-bind-html="data.acf.project_description"></p>
+                    <h4 class="md-subhead">Business Problem</h4>
+                    <p class="md-body-1" ng-bind-html="data.acf.business_problem"></p>
+                </div>
+                <div class="info" layout="column" layout-align="start start">
+                    <h4 class="md-subhead">Technical Challenges</h4>
+                    <p class="md-body-1" ng-bind-html="data.acf.technical_challenges"></p>
+                </div>
+                <div class="info" layout="column" layout-align="start start">
+                    <h4 class="md-subhead">Solution</h4>
+                    <p class="md-body-1" ng-bind-html="data.acf.solution"></p>
                 </div>
             </div>
         </md-card>

@@ -1,7 +1,7 @@
 app.factory('config', function() {
     var configData = {};
 
-    configData.wpUrl =  "https://www.trentsdevsite.com/wp-json/wp/v2";
+    configData.wpUrl =  "http://backend.trentsalazar.com/wp-json/wp/v2";
     configData.loading = false;
 
     return {

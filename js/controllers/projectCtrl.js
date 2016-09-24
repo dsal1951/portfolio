@@ -7,7 +7,7 @@ app.controller('projectCtrl', ['$scope','$http','$routeParams','config',
 
 
 
-    $http.get('https://www.trentsdevsite.com/wp-json/wp/v2/pages/'+$scope.projectId, {timeout: 20000})
+    $http.get('http://backend.trentsalazar.com/wp-json/wp/v2/pages/'+$scope.projectId, {timeout: 20000})
         .success(function(data) {
             $scope.loading = false;
             $scope.data = data;

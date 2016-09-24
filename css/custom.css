@@ -10,6 +10,10 @@ ANGULAR-MATERIAL BUG FIXES
 /*max-height: 100%;*/
 /*box-sizing: border-box;*/
 /*}}*/
+* {
+  margin: 0;
+  padding: 0; }
+
 /*-------------------------------------------------------
 MATERIAL RESETS
 -------------------------------------------------------*/
@@ -106,13 +110,21 @@ SIDE NAV
 
 .nav-item md-icon {
   min-height: 24px;
-  color: rgba(0, 0, 0, 0.54);
-  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
-  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s; }
+  color: rgba(0, 0, 0, 0.54); }
+
+md-icon.disabled {
+  vertical-align: bottom; }
 
 .nav-item span {
   padding-left: 10px;
   vertical-align: middle; }
+
+span.coming {
+  display: block;
+  font-size: 10px;
+  font-style: italic;
+  line-height: 0;
+  padding-left: 39px; }
 
 .visually-hidden {
   border: 0;
@@ -231,12 +243,15 @@ Resume
 md-card.resume {
   max-width: 1160px;
   width: 100%;
-  min-height: 300px;
+  min-height: 200px;
   margin: 8px 0; }
 
 .resume section {
   display: block;
   width: 100%; }
+.resume #summary p.md-subhead {
+  line-height: 1.9;
+  padding: 8px 0 8px 16px; }
 .resume a {
   color: #1976D2;
   text-decoration: none; }
@@ -294,7 +309,6 @@ Portfolio
 Project
 -----------------------------------------------------------*/
 .project md-card {
-  width: 100%;
   max-width: 960px; }
 
 .project-details md-card {
@@ -312,5 +326,16 @@ Project
   padding: 16px 24px 8px 24px; }
 .project-details .info {
   padding-bottom: 8px; }
+
+/*Vertical Styling */
+@media (min-width: 960px) {
+  .project md-card {
+    max-width: 100%; }
+
+  .project-details md-card {
+    max-width: 100%; } }
+/*---------------------------------------------------------
+Coming Soon
+-----------------------------------------------------------*/
 
 /*# sourceMappingURL=custom.css.map */

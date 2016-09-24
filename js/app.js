@@ -43,13 +43,13 @@ app.config(function ($routeProvider, $locationProvider, $sceProvider, $mdTheming
             redirectTo: '/blog'
         });
 
-    //$locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 });
 
 app.run(["$rootScope", "$location", "$mdToast", function ($rootScope, $location, $mdToast) {
     // Sets the loading bar at the top of the page to its default state (off)
     $rootScope.loading = false;
-    $rootScope.wpUrl = "https://www.trentsdevsite.com/wp-json/wp/v2/";
+    $rootScope.wpUrl = "http://backend.trentsalazar.com/wp-json/wp/v2/";
    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         $rootScope.title = current.$$route.title;
     });
